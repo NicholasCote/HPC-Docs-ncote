@@ -11,7 +11,7 @@
 
 Binder is a web based service that enables a code repository link, with information about where to look in the repo, to create an individual compute instance configured to run the repository contents in a JupyterLab environment. Access the Binder Web UI via the link above to be greeted by a page that looks like the following:
 
-<img src="https://ncar.github.io/cisl-cloud/_static/binder/binder.png"/>
+<img src="../../../media/binder/binder.png"/>
 
 Paste in the code repository URL, the Git ref if not main, and a path to a notebook to launch by default if you want. Click the `launch` button to build a containerized version of the repository, if one doesn't exist, and when complete it will redirect you to a JupyterHub instance that requires Authenticating with GitHub. 
 

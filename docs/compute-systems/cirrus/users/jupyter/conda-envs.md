@@ -4,7 +4,7 @@ The NCAR JupyterHub utilizes an extension known as [nb_conda_kernels](https://gi
 
 ## Creating a new env
 
-Most of the time well written code will contain a list of packages it requires to run. These typically will be in either a `requirements.txt` file (for `pip`) or an `environment.yml` file (for `conda`). The following example will follow a workflow where a [GitHub repository](github) that contains an `environment.yml` is cloned in to JupyterHub.
+Most of the time well written code will contain a list of packages it requires to run. These typically will be in either a `requirements.txt` file (for `pip`) or an `environment.yml` file (for `conda`). The following example will follow a workflow where a GitHub repository that contains an `environment.yml` is cloned in to JupyterHub.
 
 Let's say you are working on the geocat-examples repository found [here](https://github.com/NCAR/geocat-examples). You've followed the procedure to clone the repository in to your JupyterHub and now you want to work directly with the code. Before getting started we want to spin up an environment that contains all the packages required for the codebase. In the geocat-examples repository the package list is called `conda_environment.yml`. If in the `File Browser` you are in the directory containing the package list you can open a new `Launcher` tab and open the `Terminal`. This will open directly in the directory you were present in when launched. If you are not in the directory containing the package list `cd` to the appropriate directory or use the path in your `mamba env create` command like in the following example:
 ```
@@ -20,7 +20,7 @@ It will take a little while to install all the packages and create the environme
 The NCAR JupyterHub has a custom conda environment, cisl-cloud-base, as the default base environment. This environment has been put together based on input from users, referencing other production Jupyter images, and requirements that were set to deliver to users. 
 
 !!! info
-This is just a default environment that provides common packages to try and enable users to get started quickly. Custom environments are supported and documentation on how to implement them can be found [here](./customize/env)
+    This is just a default environment that provides common packages to try and enable users to get started quickly. Custom environments are supported and documentation on how to implement them can be found [here](./customize/env)
 
 #### List of Packages used
 

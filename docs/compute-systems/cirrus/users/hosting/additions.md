@@ -16,9 +16,9 @@ URL to use: https://ncote-cloud-demo.k8s.ucar.edu/
 Thank you
 ```
 
-```{note}
-FQDN's, and URL's, are required to be in the `*.k8s.ucar.edu` domain. Currently access to this domain, and the applications hosted in it, is restricted to UCAR internal networks and VPN connections. We are working to have an option for publicly accessible URL's.
-```
+!!! note
+    FQDN's, and URL's, are required to be in the `*.k8s.ucar.edu` domain. Currently access to this domain, and the applications hosted in it, is restricted to UCAR internal networks and VPN connections. We are working to have an option for publicly accessible URL's.
+
 
 ## Helm Charts & Argo CD
 

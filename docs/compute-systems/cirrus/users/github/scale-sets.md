@@ -46,18 +46,31 @@ Your token will be displayed and this is the only time you can view it without r
 
 - Save the secret
 
+### Requesting a Runner Scale Set
+
+Administrator assistance is required to connect GitHub Runner scale sets on CIRRUS once your PAT has been added to OpenBao. More details can be found at this [link on creating tickets](../../create-tickets). Below is an example ticket description to add a new GitHub Runner scale set to a repository.
+
+```
+Hello,
+I have an repository that I would like to connect a GitHub runner scale set to. I have added my PAT to OpenBao following the documentation instructions.
+
+Link to GitHub repository: https://github.com/NCAR/<respository-name>
+
+Thank you
+```
+
+### Next Steps
+
+Secrets in OpenBao will be configured to automatically sync to the Cirrus infrastructure and be accessible by your Github runner. A CIRRUS admin will add a scale set to the repository and will update the ticket with details once it's completed or if there are any issues. Secrets will expire every 365 days so it is up to each user to update their tokens and secrets as needed.
+
 ### Updating an existing OpenBao secret
 
 You may need to add a new token for a new repository or update an old token due to it expiring.
 
-- Login to Openbao as defined above
+- Login to OpenBao as defined above
 - Once in the `kv` screen list your secrets by entering `<username>/` in the view secret box
 - You should see a list of your secrets including the `github_pat` secret previously created
 - Edit the secret and add a new key/value token as defined above
-
-### Next Step
-
-Secrets in openbao will be configured to automatically sync to the Cirrus infrastructre and be accessible by your Github runner. Secrets will expire every 365 days so it is up to each user to update their tokens and secrets as needed.
 
 ## Using a CIRRUS admins PAT
 
@@ -92,7 +105,7 @@ https://github.com/NCAR/<respository-name>/settings/access
 
 Use the Add people button to input and select the CIRRUS team members user name. This will bring up a page that allows the selection of a role for the invited user. Select Admin and then click the Add selection button. Please update the ticket once the CIRRUS admin shows in the Manage access window under Direct access.
 
-### Using the Scale Set
+## Using the Scale Set
 
 Once the CIRRUS admin has connected a scale set to your repository they will provide the name of the scale set to use in the Actions workflow. Use this name when defining the `runs-on:` line in the Action workflow yaml file like the following
 
