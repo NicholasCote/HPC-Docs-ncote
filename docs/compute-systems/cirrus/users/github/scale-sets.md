@@ -120,5 +120,3 @@ jobs:
       image: hub.k8s.ucar.edu/myrepo/mynewimage:v1.2
     steps:
 ```
-
-## Using your own PAT
