@@ -22,12 +22,9 @@ Thank you
 
 ## Helm Charts & Argo CD
 
-Using custom [Helm charts](https://helm.sh/docs/topics/charts/) to manage and deploy applications on the on-prem cloud is the preferred method today. One of the Microservices provided as part of the on-prem cloud is [Argo CD](https://argo-cd.readthedocs.io/). Argo can be configured by a on-prem cloud Administrator to deploy, and automatically update, a Helm chart stored in a Git repository. We provide 3 different Helm templates as examples of places to start. 
+Using custom [Helm charts](https://helm.sh/docs/topics/charts/) to manage and deploy applications on the on-prem cloud is the preferred method today. One of the Microservices provided as part of the on-prem cloud is [Argo CD](https://argo-cd.readthedocs.io/). Argo can be configured by a on-prem cloud Administrator to deploy, and automatically update, a Helm chart stored in a Git repository. We provide different Helm templates as examples of places to start out of the following repository. 
 
-* [Standalone Container(s)](https://github.com/NicholasCote/web-app-helm)
-* [Containers with Auto-scaling](https://github.com/NicholasCote/web-app-helm-auto-scale)
-* [Container with a Dask Cluster](https://github.com/NicholasCote/web-app-dask-helm)
-* [Container with GLADE volume mounts](https://github.com/NicholasCote/web-app-vols-helm)
+* [CIRRUS Helm Examples](https://github.com/NCAR/cirrus-helm-examples)
 
 If you have a containerized version of your application and want to host it on the CISL cloud currently the best way to get started is by using this [link to submit a ticket](../../create-tickets) to the CIRRUS team. A member of the team can help make sure your Helm chart and application are configured and deployed successfully. 
 

@@ -29,6 +29,8 @@ Containers remove all the frills of a typical operating system and provide a pla
 
 CIRRUS utilizes a CI/CD methodology known as GitOps to deploy and manage applications. A collection of YAML files, known as a Helm chart, creates a package that Kubernetes uses to deploy applications based on the desired state set in Git. A Git code repository is then connected to the CIRRUS Continuous Delivery tool Argo CD. Argo CD watches the Git repo for changes and updates the application state to match the contents of the repository automatically. This enables changes to be handled directly via Git and enables features like version control, history, and an easier means to collaborate. 
 
+For more information on creating Helm charts, see [Adding Applications](./users/hosting/additions.md).
+
 -----
 
 ### Container Registry
@@ -36,10 +38,22 @@ CIRRUS utilizes Harbor to provide a container registry based on open source soft
 
 The Harbor web interface can be accessed at the following URL : https://hub.k8s.ucar.edu/. Credentials will be your CIT sso username and password. There is no need to specify a domain.
 
+For more information on using the Harbor container registry, see [Container Registry](./users/container-registry/index.md).
+
+-----
+
+### Secrets Manager
+
+CIRRUS hosts a secrets manager called OpenBao that is available to UCAR employees. The OpenBao web interface can be accessed at the following URL : https://bao.k8s.ucar.edu. The authentication method is LDAP and credentials are your CIT sso username and password. The secrets stored in OpenBao are accessed by containers running on CIRRUS by utilizing the [External Secrets Operator](https://external-secrets.io/latest/). OpenBao provides encryption at rest for stored secrets, while the External Secrets Operator ensures secrets remain encrypted during transmission between services.
+
+For more information on OpenBao, see [Secret Manager](./users/openbao/openbao.md).
+
 -----
 
 ### GitHub Actions runner scale sets
 CIRRUS has the ability to connect to GitHub repositories and automatically provision and scale GitHub runners on demand.
+
+For more information on using GitHub Actions runner scale sets, see [GitHub Actions Runners](./users/github/scale-sets.md).
 
 -----
 ### JupyterHub
@@ -47,10 +61,14 @@ NSF NCAR runs a JupyterHub instance that’s hosted on CIRRUS. It has GPU capabi
 
 CIRRUS also provides the ability to host unique JupyterHub for specialized tutorials. Administrators can be configured in the JupyterHubs Helm chart and those admins can approve or deny requests to join the JupyterHub instance via the Native Authenticator. 
 
+For more information, see [CIRRUS JupyterHub](./users/jupyter/jupyterhub.md).
+
 -----
 
 ### Binder
-Binder is a tool that enables sharing of custom computing environments from code repository contents. For instance, if there is a code repository that contains some Jupyter Notebooks that explain how to do something, Binder can be used to launch a compute instance that is configured automatically to run the contents of the repository. Utilize this link to the Binder official documentation to learn more about how the service runs or advanced use cases.
+Binder is a tool that enables sharing of custom computing environments from code repository contents. For instance, if there is a code repository that contains some Jupyter Notebooks that explain how to do something, Binder can be used to launch a compute instance that is configured automatically to run the contents of the repository. To learn more about how the Binder service runs or advanced use cases, please see [Binder Documentation](https://mybinder.readthedocs.io/en/latest/index.html).
+
+For more information, see [CIRRUS Binder](./users/jupyter/binderhub.md).
 
 -----
 
