@@ -38,6 +38,24 @@ The Helm chart templates above contain detailed information in the README file a
     - Container image to use. This can be a public container registry address or it can be the [Harbor internal registry](../harbor/harbor-intro)
     - Container port to expose. The port the application is run on such as `http://localhost:5000` is 5000
 
+### Persistent Volumes
+
+CIRRUS provides storage that attaches to container images and persists when the container is removed. Kubernetes refers to this as a [Persistent Volume (PV)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). This ensures that any new data written to the PV is retained when containers are upgraded and swapped out. If data was written to a directory that only existed inside the container image it would be lost when a new image is deployed. PVs can be shared across multiple containers ensuring that complex applications can all access the same information.
+
+#### Storage Classes
+
+The underlying storage is defined by a Kubernetes object known as a storage class. A Kubernetes cluster can have multiple storage classes that connect to different backing storage infrastructure. CIRRUS utilizes [Ceph](https://docs.ceph.com/en/reef/) to create storage clusters and currently has 2 storage classes on each Kubernetes cluster which can be used to provision PVs. 
+
+  - mlceph-kubepv (Ceph RDB)
+  - mlcephfs (Ceph FS)
+  - nwceph-kubepv (Ceph RDB)
+  - nwcephfs (Ceph FS)
+
+!!! note
+    Ceph RDB only allows access to a single container, ReadWriteOnce, while Ceph FS allows multiple containers, ReadWriteMany, to access the underlying storage. 
+
+Reach out to the CIRRUS team to confirm the site where an application will be deployed to ensure that the correct storage class is being defined in the Helm chart YAML. 
+
 ### Test & Production
 
 When automatically making changes to an application it's always best practice to test changes in a controlled environment before pushing those changes to a production instance. It's recommended to create a test branch of your repository, with a test Helm chart & FQDN, and add that to Argo CD along with your main branch. You can then push changes to the test branch, confirm functionality on your hosted test instance, and, if everything is working, merge those changes to your main branch.

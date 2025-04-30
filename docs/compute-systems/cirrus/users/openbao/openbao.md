@@ -28,6 +28,6 @@ You may need to update your secret in order to follow best practices when managi
 - You should see a list of your secrets
 - Edit the secret and add a new key/value token as defined above
 
-## Next Steps
+## Using Secrets in CIRRUS Applications
 
-Secrets in OpenBao will be configured to automatically sync to the Cirrus infrastructure and be accessible by your container images.
+In order to use secrets from OpenBao as environment variables in CIRRUS applications a [SecretStore](https://external-secrets.io/latest/api/secretstore/) object needs to be added to Kubernetes by the CIRRUS admin team. A SecretStore specifies how and what secrets an application can access. An [ExternalSecret](https://external-secrets.io/latest/api/externalsecret/) that defines what secrets to use can then be added to your applications Helm chart. The ExternalSecrets can then be referenced directly with the `valueFrom:` field in a Deployment. When requesting an application, see [Adding Applications](../hosting/additions.md), that requires secrets stored in OpenBao please include that information in your request. If you want to add secrets to an existing application, see [Create Tickets](../create-tickets.md)
