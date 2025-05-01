@@ -1,8 +1,8 @@
 # Using GPUs
 
-The JupyterHubs offered have GPUs available to provide more processing cores for an expansion of parallel processing capabilities. The NCAR JupyterHub has Nvidia A2 Tensor GPUs while the 2i2c JupyterHub utilizes AWS nodes with Nvidia Tesla T4 GPUs. The GPUs can be utilized by selecting a GPU image from the Server Options like in the image seen below:
+The JupyterHubs offered have GPUs available to provide more processing cores for an expansion of parallel processing capabilities. The NCAR JupyterHub has Nvidia A2 Tensor GPUs. The GPUs can be utilized by selecting a GPU image from the Server Options like in the image seen below:
 
-<img src="https://ncar.github.io/cisl-cloud/_static/K8sJHub/server-opts.png"/>
+<img src="../../media/jupyter/server-opts.png"/>
 
 We currently offer a PyTorch & Tensorflow Jupyter image. Allowing multiple users to access GPU resources at the same time is currently being handled with NVIDIA time slicing. The NVIDIA documentation on this feature at this [link](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-sharing.html) provides more detail on the exact mechanism on how this is accomplished. The GPU virtualization layer divides the available GPU resources, including processing cores, memory, and other hardware components, into time slices or time intervals. Each time slice represents a portion of the GPU's processing power and memory. The GPU hypervisor manages the allocation of these time slices to different applications or users. It keeps track of which applications or users have active GPU tasks and assigns time slices to them in a fair and efficient manner. This allows multiple applications or users to share a single GPU, making more efficient use of the hardware and ensuring fair access to GPU resources.
 

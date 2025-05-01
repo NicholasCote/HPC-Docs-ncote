@@ -19,9 +19,6 @@ It will take a little while to install all the packages and create the environme
 
 The NCAR JupyterHub has a custom conda environment, cisl-cloud-base, as the default base environment. This environment has been put together based on input from users, referencing other production Jupyter images, and requirements that were set to deliver to users. 
 
-!!! info
-    This is just a default environment that provides common packages to try and enable users to get started quickly. Custom environments are supported and documentation on how to implement them can be found [here](./customize/env)
-
 #### List of Packages used
 
 An up to date list of packages and versions can be found directly at this [link to the file in GitHub](https://github.com/NCAR/cisl-cloud/blob/main/configs/jupyter/base-notebook/environment.yml)
