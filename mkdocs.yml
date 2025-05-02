@@ -140,6 +140,7 @@ nav:
       - Starting Casper Jobs:
             - compute-systems/casper/starting-casper-jobs/index.md
             - Casper job Script Examples: compute-systems/casper/starting-casper-jobs/casper-job-script-examples.md
+            - Casper Node Types: compute-systems/casper/starting-casper-jobs/casper-node-types.md
       - Using Remote Desktops: compute-systems/casper/remote-desktops.md
       - Casper Software: compute-systems/casper/casper-modules.md
     - CIRRUS:
@@ -188,6 +189,7 @@ nav:
     - Derecho Overview: tutorials/derecho-overview.md
     - Dask Tutorial: tutorials/dask-tutorial.md
     - Profiling and Debugging: tutorials/profiling-and-debugging.md
+    - Managing Permissions and Data Sharing: tutorials/permissions-and-data-sharing.md
     - Advanced PBS: tutorials/advanced-pbs.md
     - Using Globus v5: tutorials/globus.md
     - NCAR Storage Spaces: tutorials/storage.md
