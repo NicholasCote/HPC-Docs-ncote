@@ -1,6 +1,6 @@
 # Adding Applications
 
-CIRRUS utilizes a development strategy known as GitOps. A code repository is connected to the CIRRUS Continuous Deployment (CD) tool Argo CD. Changes are Continuously Integrated (CI) in to the code repository. When the changes have been tested and accepted a new container image can be built to incorporate the changes. The new image can then be used in the application definition stored in the code repository and that syncs automatically to update the deployment.
+CIRRUS utilizes a development strategy known as GitOps. A code repository is connected to the CIRRUS Continuous Deployment (CD) tool Argo CD. Changes are Continuously Integrated (CI) in to the code repository. When the changes have been tested and accepted a new container image can be built to incorporate the changes. The new image needs to be stored in a container registry to be utilized by CIRRUS. For more information on the CIRRUS container registry, see [Container Registry](../container-registry/index.md). The new image can then be used in the application definition stored in the code repository and that syncs automatically to update the deployment.
 
 Administrator assistance is required to initially setup your application on CIRRUS. More details can be found at this [link on creating tickets](../../create-tickets). Below is a template for what a ticket Description should be for new deployments and the documentation after covers how to create and provide those details.
 
@@ -46,15 +46,13 @@ CIRRUS provides storage that attaches to container images and persists when the 
 
 The underlying storage is defined by a Kubernetes object known as a storage class. A Kubernetes cluster can have multiple storage classes that connect to different backing storage infrastructure. CIRRUS utilizes [Ceph](https://docs.ceph.com/en/reef/) to create storage clusters and currently has 2 storage classes on each Kubernetes cluster which can be used to provision PVs. 
 
-  - mlceph-kubepv (Ceph RDB)
-  - mlcephfs (Ceph FS)
-  - nwceph-kubepv (Ceph RDB)
-  - nwcephfs (Ceph FS)
+  - Ceph RDB
+  - Ceph FS
 
 !!! note
     Ceph RDB only allows access to a single container, ReadWriteOnce, while Ceph FS allows multiple containers, ReadWriteMany, to access the underlying storage. 
 
-Reach out to the CIRRUS team to confirm the site where an application will be deployed to ensure that the correct storage class is being defined in the Helm chart YAML. 
+The Helm chart examples contain up to date storage class names to use in applications.  
 
 ### Test & Production
 

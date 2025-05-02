@@ -148,7 +148,6 @@ nav:
             - compute-systems/cirrus/users/agile.md
             - compute-systems/cirrus/users/create-tickets.md
       - Adding Applications: compute-systems/cirrus/users/hosting/additions.md
-      - Binder: compute-systems/cirrus/users/jupyter/binderhub.md
       - Container Registry: 
             - compute-systems/cirrus/users/container-registry/index.md
             - Image Management: compute-systems/cirrus/users/container-registry/image-mgmt.md
@@ -161,6 +160,7 @@ nav:
             - Conda Environments: compute-systems/cirrus/users/jupyter/conda-envs.md
             - GPU Use: compute-systems/cirrus/users/jupyter/jhub-gpu.md
             - Dask: compute-systems/cirrus/users/jupyter/jhub-dask.md
+            - Binder: compute-systems/cirrus/users/jupyter/binderhub.md
       - compute-systems/cirrus/users/openbao/openbao.md
       - Service Level Agreements: compute-systems/cirrus/slas.md
     - JupyterHub:
