@@ -4,7 +4,7 @@ The ***CIRRUS*** team is utilizing hybrid Agile Project Management strategies (K
 
 ## What is Agile Project Management?
 
-At a high level Agile is a framework that focuses on interaction, collaboration, and visibility in order to predictably deliver working product that meets all customer requirements. 
+At a high level Agile is a framework that focuses on interaction, collaboration, and visibility in order to predictably deliver a working product that meets all customer requirements. 
 
 ## What is Waterfall?
 
